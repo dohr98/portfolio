@@ -1,0 +1,232 @@
+@charset "utf-8";
+/* -------------------------------------header------------------------------------ */
+header{
+    height: 100px;
+}
+header .inner{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .inner ul li{
+    display: inline-block;
+}
+header .inner nav ul li{
+    font-size: 20px;
+    margin: 0 35px;
+}
+header .inner .right_menu li:nth-child(1){
+    margin-right: 20px;
+}
+/* ----------------------------main_viusal------------------------------ */
+.main_visual{
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+}
+.main_visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ---------------------------------video---------------------------- */
+.video{
+    padding: 180px 0;
+}
+.video .inner .tab_menu{
+    display: flex;
+    color: #666;
+}
+.video .inner .tab_menu li{
+    margin-right: 20px;
+}
+.video .inner .tab_menu li.on{
+    position: relative;
+    color: #333;
+    font-weight: bold;
+}
+.video .inner .tab_menu li.on::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #333;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;  /* 50%인곳에서 생성해줘서 정확히 중간에 안옴  */
+    transform: translateX(-50%); /* 정확히 정가운데에 배치해줌 */
+}
+.video .inner .list{
+    padding-top: 100px;
+}
+/* 카테고리클릭시 각 컨텐츠로 바뀌게 */
+.video .inner .list .list_in{
+    display: none;
+}
+.video .inner .list .list_in.on{
+    display: block;
+}
+/* ---- */
+.video .inner .list .list_in .swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video .inner .list .list_in .swiper-slide .youtube_wrap{
+    width: 60%;
+}
+.video .inner .list .list_in .swiper-slide .youtube_wrap .youtube{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.video .inner .list .list_in .swiper-slide .youtube_wrap .youtube iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video .inner .list .list_in .swiper-slide .info{
+    width: 40%;
+    padding-left: 50px;
+}
+.video .inner .list .list_in .swiper-slide .info h4{
+    font-size: 25px;
+    line-height: 1.2;
+}
+.video .inner .list .list_in .swiper-slide .info p{
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+}
+.video .inner .list .list_in .swiper-slide .info dl{
+    display: flex;
+    margin-bottom: 20px;
+}
+.video .inner .list .list_in .swiper-slide .info dl dt{
+    width: 90px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.video .inner .list .list_in .swiper-slide .info dl dd{
+    width: 440px;
+    line-height: 1.5;
+}
+.video .inner .list .list_in .swiper-slide .info .btn{
+    margin-top: 110px;
+}
+/* -----------슬라이드 버튼위치와 스타일, 페이징 위치변경----------- */
+.video .list{
+    position: relative;
+}
+.video .swiper{
+    position: static; /* 잡혀있는 포지션의 기능을 해제 */
+}
+.video .swiper-button-prev{
+    top: 30px;
+    margin-top: 0;
+    left: 0px;
+    background: url('../img/left.png')0 0/100% no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.video .swiper-button-next{
+    top: 30px;
+    right: auto;
+    left: 70px;
+    margin-top: 0;
+    background: url('../img/right.png')0 0/100% no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.video .swiper-pagination{
+    bottom: auto;
+    top: 37.5px;
+    left: 33px;
+    width: auto;
+}
+.video .swiper-button-next:after,
+.video .swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+.video .swiper-button-prev:after,
+.video .swiper-rtl .swiper-button-next:after{
+    display: none;
+}
+/* ---------------------------web-------------------------------- */
+.web{
+    padding: 180px 0;
+    background-color: #ddd;
+}
+.web .inner .title{
+    text-align: center;
+}
+.web .inner .list{
+    display: flex;
+    justify-content: center;
+}
+.web .inner .list .item{
+    width: calc(100% / 3 - 15px);
+    margin: 0 7px;
+}
+.web .list .item .figure{
+    width: 100%;
+    height: 370px;
+}
+.web .list .item .figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.web .inner .list .item .info{
+    background-color: #fff;
+    padding: 40px;
+}
+.web .inner .list .item .info h4{
+    font-size: 25px;
+}
+.web .inner .list .item .info p{
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 8px 0 20px;
+}
+.web .inner .list .item .info dl{
+    display: flex;
+    margin-bottom: 10px;
+}
+.web .inner .list .item .info dl dt{
+    margin-right: 20px;
+    font-weight: bold;
+}
+.web .inner .list .item .info .btn{
+    margin-top: 40px;
+}
+/* ----------------------------graphic------------------- */
+.graphic{
+    padding: 180px 0;
+}
+.graphic .inner .title{
+    text-align: center;
+}
+.graphic .inner .list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.graphic .inner .list .item{
+    width: calc(100% / 4 - 15px);/* 가로값 : 전체에 4개씩 배치, 사이 간격은 15px */
+    margin-bottom: 30px;
+}
+.graphic .inner .list .item a img{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+.graphic .inner .list .item .info h4{
+    font-size: 25px;
+    margin: 15px 0 10px;
+}

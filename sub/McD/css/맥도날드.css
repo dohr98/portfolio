@@ -1,0 +1,542 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    color: #333;
+    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+    line-height: 1;
+}
+body div a:nth-child(1) p{
+    font-size: 30px;
+    color: #fff;
+    background-color: #264a36;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+    z-index: 9;
+    bottom: 60px;
+    right: 45px;
+}
+body div a:nth-child(2) p{
+    font-size: 14px;
+    color: #fff;
+    background-color: #d87e00;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+    z-index: 9;
+    bottom: 160px;
+    right: 45px;
+}
+/* ---------------------------header------------------------- */
+header .inner{
+    height: 170px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+header .inner .list1{
+    height: 85px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+header .inner .list1 figure img{
+    display: block;
+}
+header .inner > ul{
+    display: flex;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+}
+header .inner > ul li{
+    margin-left: 40px;
+    font-size: 13px;
+    font-weight: 400;
+}
+header .inner > ul li i{
+    font-size: 20px;
+}
+header .inner .list2{
+    height: 85px;
+    width: 100%;
+    background-color: #db0007;
+}
+header .inner .list2 ul{
+    display: flex;
+    justify-content: center;
+    line-height: 85px;
+}
+header .inner .list2 ul li{
+    margin: 0 45px;
+    color: #fff;
+    font-size: 20px;
+}
+/* ------------------main visual----------------------- */
+.main_visual .inner{
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 110px;
+}
+.main_visual .inner img{
+    display: block;
+    object-fit: cover;
+}
+.main_visual .inner .butten ul{
+    display: flex;
+    position: absolute;
+    right: 135px;
+    bottom: -50px;
+    z-index: 9;
+}
+.main_visual .inner .butten ul li{
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-size: 22px;
+}
+.main_visual .inner .butten ul li:nth-child(1){
+    background-color: #d87e00;
+    border-radius: 30px 0 0 0;
+}
+.main_visual .inner .butten ul li:nth-child(1):hover{
+    background-color: #db0007;
+    font-size: 24px;
+}
+.main_visual .inner .butten ul li:nth-child(2){
+    background-color: #264a36;
+    border-radius: 0 0 30px 0;
+}
+.main_visual .inner .butten ul li:nth-child(2):hover{
+    background-color: #db0007;
+    font-size: 24px;
+}
+.main_visual .swiper-button-next:after,
+.main_visual .swiper-rtl .swiper-button-prev:after{
+    color: #264a36;
+}
+.main_visual .swiper-button-prev:after,
+.main_visual .swiper-rtl .swiper-button-next:after{
+    color: #264a36;
+}
+/* ------------------------cont01--------------------- */
+.cont01 .inner{
+    width: 1650px;
+    margin: 0 auto;
+}
+.cont01 .inner .title{
+    width: 270px;
+    height: 60px;
+    margin-top: 17px;
+    margin-bottom: 33px;
+    position: relative;
+}
+.cont01 .inner .title h2{
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cont01 .inner .title span{
+    width: 60px;
+    height: 60px;
+    background-color: #d87e00;
+    border-radius: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.cont01 .inner .items{
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .inner .items .item figure img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.7s;
+}
+.cont01 .inner .items .item figure{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.cont01 .inner .items .item:hover figure img{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+.cont01 .inner .items .item div{
+    width: 399px;
+    height: 145px;
+}
+.cont01 .inner .items .item div h3{
+    font-size: 18px;
+    text-align: center;
+    margin: 25px 0 13px;
+}
+.cont01 .inner .items .item div p{
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+}
+/* ----------------------cont02---------------------------- */
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: static;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02{
+    margin-bottom: 80px;
+    position: relative;
+}
+.cont02 .inner{
+    width: 1650px;
+    margin: 0 auto;
+}
+.cont02 .inner .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.cont02 .inner .title h2{
+    font-size: 40px;
+    width: 400px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cont02 .inner .title span{
+        width: 60px;
+        height: 60px;
+        background-color: #d87e00;
+        border-radius: 30px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+}
+.cont02 .inner .title ul{
+    display: flex;
+}
+.cont02 .inner .title ul li{
+    margin-left: 20px;
+}
+.cont02 .inner .title ul p{
+    margin-left: 20px;
+}
+.cont02 .inner .title ul li:hover{
+    color: #264a36;
+    -webkit-text-stroke: 1px #264a36;
+}
+.cont02 .swiper-button-prev:after,
+.cont02 .swiper-rtl .swiper-button-next:after{
+    color: #264a36;
+    position: absolute;
+    bottom: -20px;
+}
+.cont02 .swiper-button-next:after,
+.cont02 .swiper-rtl .swiper-button-prev:after{
+    color: #264a36;
+    position: absolute;
+    bottom: -20px;
+}
+.cont02 .swiper-pagination-bullet-active{
+    background-color: #db0007;
+}
+.cont02 .inner .list .item p{
+    width: 260px;
+    height: 43px;
+    background-color: #264a36;
+    color: #fff;
+    border-radius: 22px;
+    line-height: 43px;
+    margin-top: 12px;
+}
+.cont02 .inner .list .item p:hover{
+    background-color: #d87e00;
+}
+.cont02 .inner .list .item figure{
+    overflow: hidden;
+    border-radius: 22px;
+}
+.cont02 .inner .list .item figure img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.7s;
+}
+.cont02 .inner .list .item figure img:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+.cont02 .swiper-horizontal > .swiper-pagination-bullets, 
+.cont02 .swiper-pagination-bullets.swiper-pagination-horizontal, 
+.cont02 .swiper-pagination-custom, 
+.con02 .swiper-pagination-fraction{
+    position: absolute;
+    bottom: -30px;
+}
+/* ------------------------------cont03------------------------ */
+.cont03{
+    width: 100%;
+    margin: 0 auto 150px;
+}
+.cont03 .inner{
+    width: 100%;
+    height: 540px;
+}
+.cont03 .inner .img{
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    background-image: url('../img/03-01.png');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cont03 .inner .img .butten{
+    width: 1650px;
+    margin: 0 auto;
+    padding: 105px 0 110px;
+    padding-left: 834px;
+    color: #264a36;
+}
+.cont03 .inner .img .butten ul{
+    display: flex;
+}
+.cont03 .inner .img .butten h2:nth-child(1){
+    font-size: 40px;
+}
+.cont03 .inner .img .butten h2:nth-child(2){
+    font-size: 40px;
+    margin: 20px 0 40px;
+}
+.cont03 .inner .img .butten p{
+    font-size: 24px;
+    margin-bottom: 114px;
+}
+.cont03 .inner .img .butten ul li{
+    width: 215px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: #264a36;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.7s;
+}
+.cont03 .inner .img .butten ul li:hover{
+    background-color: #db0007;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+/* ---------------------------------------cont04--------------------------- */
+.cont04{
+    margin-bottom: 130px;
+}
+.cont04 .inner{
+    width: 1650px;
+    margin: 0 auto;
+}
+.cont04 .inner h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.cont04 .inner .list{
+    width: 1650px;
+    height: 852px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(51, 51, 51, 0.11),
+    -10px -10px 10px rgba(51, 51, 51, 0.11),
+    10px -10px 10px rgba(51, 51, 51, 0.11),
+    -10px 10px 10px rgba(51, 51, 51, 0.11);
+}
+.cont04 .inner .list .item{
+    width: 1408px;
+    margin: 0 auto;
+}
+.cont04 .inner .list .item .box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 110px;
+    position: relative;
+}
+.cont04 .inner .list .item .box div figure img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.cont04 .inner .list .item .box p{
+    width: 160px;
+    height: 43px;
+    background-color: #db0007;
+    border-radius: 22px;
+    text-align: center;
+    line-height: 43px;
+    color: #fff;
+    position: absolute;
+    top: 337px;
+    left: 45px;  
+    transition: 0.7s; 
+}
+.cont04 .inner .list .item .box p:hover{
+    background-color: #264a36;
+    transition: 0.7s;
+}
+.cont04 .inner .list .item h3{
+    font-size: 23px;
+    margin: 50px 0 30px;
+}
+.cont04 .inner .list .item .textbox{
+    display: flex;
+    justify-content: space-between;
+}
+.cont04 .inner .list .item .textbox ul li{
+    width: 600px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    line-height: 80px;
+    padding-left: 30PX;
+    position: relative;
+}
+.cont04 .inner .list .item .textbox ul li:nth-child(2){
+    margin: 10px 0 10px;
+}
+.cont04 .inner .list .item .textbox ul li a{
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    scale: 0;
+    transition: 0.7s;
+}
+.cont04 .inner .list .item .textbox ul li:hover{
+    box-shadow: inset 10px 10px 10px rgba(51, 51, 51, 0.199);
+}
+.cont04 .inner .list .item .textbox ul li:hover a{
+    scale: 100%;
+    transition: 0.7s;
+}
+/* --------------footer----------------------- */
+footer{
+    color: #fff;
+    font-weight: 400;
+}
+footer .inner{
+    width: 100%;
+    height: 380px;
+    background-color: #db0007;
+    margin: 0 auto;
+}
+footer .inner .list{
+    width: 1650px;
+    height: 380px;
+    margin: 0 auto;
+    padding: 90px 0 140px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .list .left h2{
+    font-size: 36px;
+    color: #d87e00;
+    margin-top: 25px;
+}
+footer .inner .list .center div ul{
+    display: flex;
+}
+footer .inner .list .center div ul:nth-child(1){
+    margin-bottom: 20px;
+}
+footer .inner .list .center div ul:nth-child(2){
+    margin-bottom: 60px;
+}
+footer .inner .list .center div ul li{
+    margin-right: 25px;
+}
+footer .inner .list .center > ul li{
+    color: #ec9899;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+footer .inner .list .center > ul li:nth-child(5){
+    margin-top: 20px;
+}
+footer .inner .list .right ul{
+    display: flex;
+}
+footer .inner .list .right ul li{
+    font-size: 30px;
+}
+footer .inner .list .right ul li a figure img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+
+
+
