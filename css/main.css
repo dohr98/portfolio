@@ -33,6 +33,15 @@ header .inner{
     justify-content: space-between;
     align-items: center;
 }
+header .inner h1 a figure{
+    height: 100px;
+}
+header .inner h1 a figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 header .inner ul li{
     display: inline-block;
 }
@@ -162,6 +171,9 @@ header .inner nav ul li.on{
     margin-top: 110px;
 }
 /* -----------슬라이드 버튼위치와 스타일, 페이징 위치변경----------- */
+.video{
+    background: url('../img/motionbg.gif') 0 0/100% no-repeat;
+}
 .video .list{
     position: relative;
 }
@@ -169,26 +181,26 @@ header .inner nav ul li.on{
     position: static; /* 잡혀있는 포지션의 기능을 해제 */
 }
 .video .swiper-button-prev{
-    top: 30px;
+    top: 0;
     margin-top: 0;
     left: 0px;
     background: url('../img/left.png')0 0/100% no-repeat;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
 }
 .video .swiper-button-next{
-    top: 30px;
+    top: 0;
     right: auto;
     left: 70px;
     margin-top: 0;
     background: url('../img/right.png')0 0/100% no-repeat;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
 }
 .video .swiper-pagination{
     bottom: auto;
     top: 37.5px;
-    left: 33px;
+    left: 65px;
     width: auto;
 }
 .video .swiper-button-next:after,
@@ -201,7 +213,7 @@ header .inner nav ul li.on{
 }
 /* ---------------------------web-------------------------------- */
 .web {
-    background-color: #130f1f;
+    background: url('../img/web-bg.png') 0 0 / 100% 100% no-repeat;
     position: relative;
 }
 .web h2{
@@ -411,7 +423,7 @@ footer ul li{
     background-color: #eee;
     color: #333;
     margin: 10px auto;
-    border-radius: 40px;
+    border-radius: 5px;
     text-align: center;
     line-height: 50px;
     transition: 0.7s;
