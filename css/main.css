@@ -33,10 +33,10 @@ header .inner{
     justify-content: space-between;
     align-items: center;
 }
-header .inner h1 a figure{
+header .inner figure{
     height: 100px;
 }
-header .inner h1 a figure img{
+header .inner figure a img{
     width: 100%;
     height: 100%;
     object-fit: cover;
