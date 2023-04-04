@@ -1,5 +1,5 @@
 @charset "utf-8"; /* 초기값, 공통요소(제못, 버튼, 폰트) */
-@import url(hatts//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(hatts://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;

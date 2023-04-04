@@ -88,10 +88,16 @@ header .inner nav ul li.on{
 }
 .video .inner .tab_menu{
     display: flex;
-    color: #ccc;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
 }
 .video .inner .tab_menu li{
     margin-right: 20px;
+    background-color: #130f1f;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
 }
 .video .inner .tab_menu li.on{
     position: relative;
@@ -386,9 +392,14 @@ header .inner nav ul li.on{
     font-size: 20px;
     margin: 10px 0;
 }
+.profile .list .info ul:nth-child(3) li{
+    font-size: 15px;
+    
+}
 .profile .list .info ul li strong{
     width: 180px;
     display: block;
+    font-size: 20px;
 }
 .profile .list .info .skill{
     margin-top: 40px;
