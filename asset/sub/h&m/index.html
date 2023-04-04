@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도훈락H&M</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        .notosanskr * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            color: #333;
+            line-height: 1;
+            font-family: 'Noto Sans KR';
+            font-weight: 700;
+            position: relative;
+            height: 100%;
+        }
+        /* header------------------------------ */
+        header .inner{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.205);
+            position: fixed;
+            z-index: 9; /* 제일 앞으로 보내주는 명령어, 값의 크기에 따라 배열을 바꿔줄 수 있음 (높은 숫자가 위로)마이너스 가능 */
+        }
+        header .inner .list{
+            width: 1644px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+        header .inner .list div{
+            height: 50px;
+        }
+        header .inner .list div a img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        header .inner .list .menu{
+            height: 100%;
+        }
+        header .inner .list .menu > ul{
+            display: flex;
+        }
+        header .inner .list .menu > ul .depth01 > a{
+            line-height: 100px;
+            display: block;
+            padding: 0 40px;
+            font-size: 20px;
+            color: #fff;
+        }
+        header .inner .list .menu ul .depth01 .depth02{
+            background-color: rgba(250, 235, 215, 0.5);
+            text-align: center;
+            display: none;
+        }
+        header .inner .list .menu ul .depth01 .depth02 li{
+            line-height: 3;
+            color: #333;
+            font-size: 14px;
+        }
+        header .inner .list .menu ul .depth01:hover .depth02 li:hover{
+            background-color: rgb(222, 184, 135);
+            color: brown;
+        }
+        header .inner .list > ul{
+            display: flex;
+            align-items: center;
+        }
+        header .inner .list > ul li a i{
+            color: #fff;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+        /* main visual ------------------------------------------------- */
+        .main_visual{
+            width: 100%;
+            height: 850px;
+            margin: 0 auto;
+            
+        }
+        .main_visual img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            display: block;
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+        }
+        .swiper-button-next:after{
+            color: #e8aa42;
+        }
+        .swiper-button-prev:after{
+            color: #e8aa42;
+        }
+        /* cont01----------------------------------------------------------- */
+        .cont01{
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff7e9;
+        }
+        .cont01 .inner{
+            height: 1086px;
+            padding: 100px 138px 140px;
+            
+        }
+        .cont01 h3{
+            font-size: 42px;
+            text-align: center;
+        }
+        .cont01  ul{
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+        .cont01 ul li{
+            font-size: 20px;
+            margin-right: 35px;
+            font-weight: 300;
+            position: relative;
+        }
+        .cont01 .inner ul li:hover{
+            font-weight: 700;
+            text-decoration-line: underline; 
+        }
+        .cont01 .inner ul li:hover::after{
+            content: '🔴';
+            font-size: 1px;
+            display: block;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+        }
+        .cont01 .inner .item p:nth-child(2){
+            margin: 20px 0 10px;
+            font-weight: 500;
+        }
+        .cont01 .inner .item p:nth-child(3){
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        .cont01 .inner .items{
+            display: flex;
+            justify-content: space-between;
+        }
+        /* cont02-------------------------------------------------------------------- */
+        .cont02 .inner{
+            width: 100%;
+            padding: 0 138px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .cont02 .inner span{
+            position: absolute;
+            bottom: -100px;
+            right: 78px;
+        }
+        .cont02 .inner h3{
+            font-size: 42px;
+            position: absolute;
+            top: 160px;
+            left: 480px;
+        }
+        .cont02 .inner .list{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+        .cont02 .inner > p{
+            position: absolute;
+            bottom: -35px;
+            right: 100px;
+            color: #fff;
+            font-weight: 300;
+        }
+        .cont02 .inner .list .item{
+            position: relative;
+        }
+        .cont02 .inner .list .item:nth-child(5) figure{
+            width: 500px;
+            height: 600px;
+            border-radius: 0 50px 0 0;
+            overflow: hidden;
+        }
+        .cont02 .inner .list .item:nth-child(5) :hover img{
+            transform: scale(1.2);
+            transition: 0.7s;
+        }
+        .cont02 .inner .list .item figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.7s;
+        }
+        .cont02 .inner .list .item p{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 300;
+        }
+        .cont02 .inner .list .item:nth-child(5) p{
+            color: #333;
+            font-weight: 400;
+        }
+        /* cont03------------------------------------------------------------------------------------------- */
+        .cont03 .inner{
+            width: 100%;
+            padding: 0 138px;
+            margin: 100px auto 0;
+        }
+        .cont03 .inner .list{
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+        .cont03 .inner .list .item figure img{
+            display: block;
+        }
+        .cont03 .inner .list h3{
+            position: absolute;
+            top: 205px;
+            right: 295px;
+            font-size: 42px;
+        }
+        .cont03 .inner .list p{
+            position: absolute;
+            top: 265px;
+            right: 335px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .cont03 .inner .list h4{
+            position: absolute;
+            top: 290px;
+            right: 320px;
+        }
+        /* footer--------------------------------------------------------------------------------------- */
+        .footer .inner{ 
+            background-color: #e8aa42;
+            width: 100%;
+            height: 750px;
+            padding: 0 138px;
+            margin: 150px auto 0;
+        }
+        .footer .inner > img{
+            display: block;
+            width: 100%;
+        }
+        .footer .inner .list-1{
+            height: 220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .inner .list-1 ul li{
+            padding: 10px 0;
+            font-weight: 500;
+        }
+        .footer .inner .list-2{
+            height: 330px;
+            display: flex;
+        }
+        .footer .inner .list-2 div h3{
+            margin-bottom: 15px;
+        }
+        .footer .inner .list-2 div{
+            margin-right: 40px;
+            padding-top: 55px;
+        }
+        .footer .inner .list-2 ul li{
+            font-weight: 500;
+            padding: 5px 0;
+        }
+        .footer .inner .list-3{
+            height: 200px;
+            display: flex;
+            align-items: center;
+        }
+        .footer .inner .list-3 div{
+            margin-right: 85px;
+        }
+        .footer .inner .list-3 div ul li{
+            font-weight: 500;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="list">
+                <div>
+                    <a href="#">
+                        <img src="img/709px-H&M-Logo.svg.png" alt="로고">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="depth01">
+                            <a href="#">여성</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">Best seller</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">현재 트렌드</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                                <li><a href="#">지속가능성</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">Divided</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">Best seller</a></li>
+                                <li><a href="#">현재 트렌드</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">남성</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">필수아이템</a></li>
+                                <li><a href="#">Winter lookbook</a></li>
+                                <li><a href="#">현재 트렌드</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                                <li><a href="#">지속가능성</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">신생아/유아</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">신생아</a></li>
+                                <li><a href="#">지금 인기아이템</a></li>
+                                <li><a href="#">여아</a></li>
+                                <li><a href="#">남아</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                                <li><a href="#">지속가능성</a></li>
+                                <li><a href="#">H&M baby</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">아동</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">지금 인기아이템</a></li>
+                                <li><a href="#">여아 2-8세</a></li>
+                                <li><a href="#">여아 9-14세</a></li>
+                                <li><a href="#">남아 9-14세</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                                <li><a href="#">지속가능성</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">H&M HOME</a>
+                            <ul class="depth02">
+                                <li><a href="#">기획상품</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">룸별 구매</a></li>
+                                <li><a href="#">현재 트렌드</a></li>
+                                <li><a href="#">상품별 구매</a></li>
+                                <li><a href="#">컨셉별 구매</a></li>
+                                <li><a href="#">지속가능성</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">스포츠</a>
+                            <ul class="depth02">
+                                <li><a href="#">여성</a></li>
+                                <li><a href="#">남성</a></li>
+                                <li><a href="#">아동</a></li>
+                                <li><a href="#">영감 및 가이드</a></li>
+                                <li><a href="#">선물</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">Sale</a>
+                            <ul class="depth02">
+                                <li><a href="#">여성복</a></li>
+                                <li><a href="#">Divided</a></li>
+                                <li><a href="#">남성복</a></li>
+                                <li><a href="#">아동복</a></li>
+                                <li><a href="#">신생아/유아</a></li>
+                                <li><a href="#">H&M HOME</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                        <li class="depth01">
+                            <a href="#">지속가능성</a>
+                            <ul class="depth02">
+                                <li><a href="#">H&M이 하는 일</a></li>
+                                <li><a href="#">H&M Take Care</a></li>
+                                <li><a href="#">H&M의 약속</a></li>
+                            </ul><!-- 2end -->
+                        </li><!-- 1 end -->
+                    </ul>
+                </div><!-- menu end -->
+                <ul>
+                    <li><a href="#"><i class="xi-user-o"></i></a></li>
+                    <li><a href="#"><i class="xi-search"></i></a></li>
+                    <li><a href="#"><i class="xi-heart-o"></i></a></li>
+                    <li><a href="#"><i class="xi-cart-add"></i></a></li>
+                </ul>
+            </div><!-- list end -->
+        </div><!-- inner end -->
+    </header><!-- header end -->
+    <section class="main_visual">
+            <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/man-g8d59e40fd_1920.jpg" alt="메인이미지">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/men-g71908ee62_1920.jpg" alt="메인이미지">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/people-gc5b037d7c_1920.jpg" alt="메인이미지">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper end -->
+    </section><!-- main visual end -->
+    <section class="cont01">
+        <div class="inner">
+            <h3>What's New</h3>
+            <ul>
+                <li>여성</li>
+                <li>남성</li>
+                <li>Divided</li>
+                <li>아동</li>
+                <li>신생아/유아</li>
+                <li>H&M HOME</li>
+            </ul>
+            <div class="items">
+                <div class="item">
+                    <figure>
+                        <img src="img/img01-1.png" alt="아이템">
+                    </figure>
+                    <p>벨티드자켓</p>
+                    <p>69,900</p>
+                    <img src="img/img02-01.png" alt="색">
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/img01-2.png" alt="아이템">
+                    </figure>
+                    <p>벨티드 패딩 자켓</p>
+                    <p>69,900</p>
+                    <img src="img/img02-02.png" alt="색">
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/img01-3.png" alt="아이템">
+                    </figure>
+                    <p>플러피 니트 가디건</p>
+                    <p>49,900</p>
+                    <img src="img/img02-03.png" alt="색">
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/img01-4.png" alt="아이템">
+                    </figure>
+                    <p>오프숄더 바디콘 드레스</p>
+                    <p>39,900</p>
+                    <img src="img/img02-04.png" alt="색">
+                </div><!-- item end -->
+            </div><!-- items end -->
+        </div><!-- innerend -->
+    </section><!-- cont01 end -->
+    <section class="cont02">
+        <div class="inner">
+            <span><img src="img/img-bg01.png" alt="상자"></span>
+            <h3>Christmas Exhibitions</h3>
+            <div class="list">
+                <div class="item">
+                    <figure><img src="img/img02-1.png" alt="아이템2"></figure>
+                    <p>슬림핏 치노 팬츠</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <figure><img src="img/img02-2.png" alt="아이템2"></figure>
+                    <p>저지 & 튤 드레스</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <figure><img src="img/img02-3.png" alt="아이템2"></figure>
+                    <p>루즈핏 테일러드 팬츠</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <figure><img src="img/img02-4.png" alt="아이템2"></figure>
+                    <p>시어서커 드레스</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <figure><img src="img/img02-5.png" alt="아이템2"></figure>
+                    <p>플러피 니트 가디건</p>
+                </div><!-- item end -->
+            </div><!-- list end -->
+            <p>아이들을 위한 크리스마스 쇼핑으로 마법같은 크리스마스를 만들어 주는데 필요한 <br />모든 것을 찾아보세요.</p>
+        </div><!-- inner end -->
+    </section><!-- cot02 end -->
+    <section class="cont03">
+        <div class="inner">
+            <div class="list">
+                <h3>MAGAZINE</h3>
+                <p>A WORLD OF INSPIRATION</p>
+                <h4>READ H&M MAGAZINE</h4>
+                <div class="item">
+                    <figure><img src="img/img03-1.png" alt="잡지"></figure>
+                </div><!-- item end-->
+                <div class="item">
+                    <figure><img src="img/img03-2.png" alt="잡지"></figure>
+                </div><!-- item end-->
+                <div class="item">
+                    <figure><img src="img/img03-3.png" alt="잡지"></figure>
+                </div><!-- item end-->
+            </div><!-- list end -->
+        </div><!-- inner end -->
+    </section><!-- cont03 end -->
+    <section class="footer">
+        <div class="inner">
+            <div class="list-1">
+                <div>
+                    <ul>
+                        <li>고객센터</li>
+                        <li>월요일-일요일: 9am - 9pm</li>
+                        <li>080-822-0220 (무료 전화)</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="img/icon01.png" alt="아이콘">
+                </div>
+            </div><!-- list-1 -->
+            <img src="img/footer-line.png" alt="선">
+            <div class="list-2">
+                <div>
+                    <h3>카테고리</h3>
+                    <ul>
+                        <li>여성</li>
+                        <li>남성</li>
+                        <li>신생아/유아</li>
+                        <li>아동</li>
+                        <li>H&M HOME</li>
+                        <li>스포츠</li>
+                        <li>Sale</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>기업정보</h3>
+                    <ul>
+                        <li>H&M채용정보</li>
+                        <li>H&M회사소개</li>
+                        <li>지속가능성</li>
+                        <li>언론</li>
+                        <li>IR정</li>
+                        <li>Corporate governance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>고객지원</h3>
+                    <ul>
+                        <li>고객 서비스</li>
+                        <li>내계정</li>
+                        <li>매장찾기</li>
+                        <li>개인정보 처리방침</li>
+                        <li>문의하기</li>
+                        <li>기프트카드</li>
+                        <li>사기신고</li>
+                        <li>Cookie Settings</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>지금 멤버에 가입하세요</h3>
+                    <ul>
+                        <li>지금 가입하고 10% 할인받으세요.</li>
+                        <li>지금 가입하기</li>
+                    </ul>
+                </div>
+            </div><!-- list-2 -->
+            <img src="img/footer-line.png" alt="선">
+            <div class="list-3">
+                <div>
+                    <figure><img src="img/under-logo.png" alt="아래로고"></figure>
+                </div>
+                <div>
+                    <ul>
+                        <li>법인명 : 에이치앤엠헤네스 앤 모리츠 주식회사</li>
+                        <li>사업자등록 번호: 220-87-83339</li>
+                        <li>대표자: 아담 칼슨, 아네타 포쿠친스카 서울특별시 강남구 영동대로 421, 9층 삼탄빌딩 (대치동) 06182</li>
+                        <li>대표번호 080-822-02200 info.kr@hm.com</li>
+                    </ul>
+                </div>
+            </div><!-- list-3 -->
+        </div><!-- inner end -->
+    </section><!-- footer end -->
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+                    delay: 4000, /* 시간설정 */
+                    disableOnInteraction: false,
+        },
+      });
+
+        //1.헤더메뉴 드롭다운 : 1차메뉴에 마우스 올렸을 때 자식인 2차메뉴 드롭다운
+        // 마우스 올렸을 때 : mouseenter();
+        // 드롭다운 : slideDown();
+        $('.depth01').mouseenter(function(){
+            $(this).children('.depth02').stop().slideDown(1000);  //1초가1000
+        });
+        //1차 메뉴에게 마우스가 벗어났을 때 : mouseleave();
+        //2차 메뉴가 슬라이드 업 : slideqUp();
+        $('.depth01').mouseleave(function(){
+            $('.depth02').stop().slideUp();
+        });
+    </script>
+</body>
+
+</html>
